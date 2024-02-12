@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="MyQuiz.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyQuiz"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <MenuBar HorizontalAlignment="Left" Margin="0,0,0, 960">
+            <MenuBarItem Title="File">
+                <MenuFlyoutItem Text="Exit" Click="MenuFlyoutItem_Click"/>
+            </MenuBarItem>
+
+            <MenuBarItem Title="Help">
+                <MenuFlyoutItem Text="About" Click="MenuFlyoutItem_Click_1"/>
+            </MenuBarItem>
+        </MenuBar>
+
+        <RadioButton x:Name="C" Content="C" Margin="383,390,0,0" VerticalAlignment="Top" Checked="C_Checked"/>
+        <RadioButton x:Name="Python" Content="Python" Margin="383,501,0,0" VerticalAlignment="Top" Checked="Python_Checked"/>
+        <RadioButton x:Name="HTML" Content="HTML" Margin="383,464,0,0" VerticalAlignment="Top" Checked="HTML_Checked"/>
+        <RadioButton x:Name="PHP" Content="PHP" Margin="383,427,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.467,3.438" Checked="PHP_Checked"/>
+        <CheckBox x:Name="Check1"  Content="int *polje=(int*)malloc(n*sizeof(int));" Margin="717,390,0,0" VerticalAlignment="Top" Checked="Check1_Checked"/>
+        <CheckBox x:Name="Check2" Content="int *polje=new int[n];" Margin="717,501,0,0" VerticalAlignment="Top" Checked="Check2_Checked"/>
+        <CheckBox x:Name="Check3" Content="int[] polje=new int[n];" Margin="717,464,0,0" VerticalAlignment="Top" Checked="Check3_Checked" Unchecked="Check3_Unchecked"/>
+        <CheckBox x:Name="Check4" Content="int[,] polje=new int[n];" Margin="717,427,0,0" VerticalAlignment="Top" Checked="Check4_Checked"/>
+        <ComboBox Margin="1026,390,0,0" Width="120">
+            <ComboBoxItem x:Name="ComboUnity" Content="Unity" Tapped="ComboUnity_Tapped"/>
+            <ComboBoxItem x:Name="ComboTinkercad" Content="Tinkercad" Tapped="ComboTinkercad_Tapped"/>
+            <ComboBoxItem x:Name="ComboUnreal" Content="Unreal Engine" Tapped="ComboUnreal_Tapped"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="383,366,0,0" TextWrapping="Wrap" Text="1. Što od sljedećeg nije programski jezik?" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="717,366,0,0" TextWrapping="Wrap" Text="2. Alociranje polja na heapu u C#" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1026,366,0,0" TextWrapping="Wrap" Text="3. C# se koristi u:" VerticalAlignment="Top"/>
+        <Button Content="PREDAJ" Margin="1055,575,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBlock x:Name="OUTPUT" HorizontalAlignment="Left" Margin="1086,749,0,0" TextWrapping="Wrap" Text="Odgovor" VerticalAlignment="Top" SelectionChanged="OUTPUT_SelectionChanged"/>
+    </Grid>
+</Page>
